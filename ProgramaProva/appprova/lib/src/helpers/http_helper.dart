@@ -53,13 +53,5 @@ class HttpHelper {
       return [];
     }
   }
-   Future<List<Nasa>> getFavoritos() async {
-    Uri uri = new Uri(
-        scheme: 'https',
-        host: dotenv.env['HOST'],
-        path: '3/list/8217279',
-        queryParameters: {
-          'api_key': dotenv.env['API_KEY'],
-          'language': dotenv.env['LANGUAGE']
-        });
+   
 }
