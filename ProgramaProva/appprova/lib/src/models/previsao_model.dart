@@ -1,42 +1,51 @@
-class Tempo {
-  late double temperatura;
-  late String cidade;
-  late double humidade;
-  late double vento;
-  late double chuva;
+class Nasa {
+  late String apod_site;
+  late String copytight;
   late String data;
-  late String diaDaSemana;
-  late String ceu;
-  late String maxima;
-  late String minima;
-  late String hora;
-  late String descricaotempo;
+  late String descricao;
+  late String hdurl;
+  late String image_thumbnail;
+  late String media_type;
+  late String title;
+  late String url;
 
-  Tempo(
-    this.hora,
-    this.descricaotempo,
-    this.maxima,
-    this.minima,
-    this.temperatura,
-    this.cidade,
-    this.humidade,
-    this.vento,
-    this.chuva,
-    this.data,
-    this.diaDaSemana,
-    this.ceu,
-  );
-  Tempo.fromJson(Map<String, dynamic> json) {
-    this.hora = json['time'];
-    this.descricaotempo = json['description'];
-    this.maxima = json['max'];
-    this.minima = json['min'];
-    this.temperatura = json['temp'];
-    this.cidade = json['city'];
-    this.humidade = json['humidity'];
-    this.vento = json['wind_speedy'];
-    this.chuva = json['condition'];
-    this.data = json['date'];
-    this.ceu = json['condition_slug'];
+  Nasa({
+    required this.apod_site,
+    required this.copytight,
+    required this.data,
+    required this.descricao,
+    required this.hdurl,
+    required this.image_thumbnail,
+    required this.media_type,
+    required this.title,
+    required this.url,
+  });
+
+  factory Nasa.fromJson(Map<String, dynamic> json) {
+    return Nasa(
+      apod_site: json['apod_site'],
+      copytight: json['copytight'],
+      data: json['date'],
+      descricao: json['description'],
+      hdurl: json['hdurl'],
+      image_thumbnail: json['image_thumbnail'],
+      media_type: json['media_type'],
+      title: json['title'],
+      url: json['url'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['apod_site'] = this.apod_site;
+    data['copytight'] = this.copytight;
+    data['date'] = this.data;
+    data['description'] = this.descricao;
+    data['hdulr'] = this.hdurl;
+    data['image_thumbnail'] = this.image_thumbnail;
+    data['media_type'] = this.media_type;
+    data['title'] = this.title;
+    data['url'] = this.url;
+    return data;
   }
 }
