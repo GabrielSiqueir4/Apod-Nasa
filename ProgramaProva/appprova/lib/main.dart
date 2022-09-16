@@ -1,4 +1,4 @@
-import 'package:appprova/src/components/bottom_nav.dart';
+import 'package:appprova/src/components/navigation.dart';
 import 'package:appprova/src/screens/login_page.dart';
 import 'package:flutter/material.dart';
 

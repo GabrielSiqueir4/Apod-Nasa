@@ -14,7 +14,20 @@ class _FavoritasPageState extends State<FavoritasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Apod Favorita')),
+      body: Stack(
+        children: [
+          Center(
+            child: Column(
+              children: [
+                SizedBox(height: 50,),
+                Text('aaasss'),
+              ],
+            ),
+
+          ),
+        ],
+      ),
+      
     );
   }
 }
