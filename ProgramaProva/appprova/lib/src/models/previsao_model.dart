@@ -1,13 +1,14 @@
 class Nasa {
-  late String apod_site;
-  late String copytight;
-  late String data;
-  late String descricao;
-  late String hdurl;
-  late String image_thumbnail;
-  late String media_type;
-  late String title;
-  late String url;
+   String apod_site;
+   String copytight;
+   String data;
+   String descricao;
+   String hdurl;
+   String image_thumbnail;
+   String media_type;
+   String title;
+   String url;
+  final String explanation;
 
   Nasa({
     required this.apod_site,
@@ -19,6 +20,7 @@ class Nasa {
     required this.media_type,
     required this.title,
     required this.url,
+    required this.explanation,
   });
 
   factory Nasa.fromJson(Map<String, dynamic> json) {
@@ -32,6 +34,7 @@ class Nasa {
       media_type: json['media_type'],
       title: json['title'],
       url: json['url'],
+      explanation: json['explanation'] ,
     );
   }
 

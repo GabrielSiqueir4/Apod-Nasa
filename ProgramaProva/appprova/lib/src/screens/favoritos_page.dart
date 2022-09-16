@@ -20,7 +20,7 @@ class _FavoritasPageState extends State<FavoritasPage> {
             child: Column(
               children: [
                 SizedBox(height: 50,),
-                Text('aaasss'),
+               
               ],
             ),
 

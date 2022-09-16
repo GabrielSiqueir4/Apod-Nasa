@@ -1,8 +1,15 @@
 import 'dart:convert';
 import 'dart:html';
+import 'dart:io';
 
 import 'package:appprova/src/models/previsao_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
+
+//https://api.nasa.gov/planetary/apod?api_key=mcBR6W9VTPUVkYcPHRRIsH2XuLafnSCVRmUy84TO
+
+import 'dart:convert';
+import 'package:http/http.dart';
 
 class HttpHelper {
   Future<List<Nasa>> getTempo() async {
@@ -53,5 +60,4 @@ class HttpHelper {
       return [];
     }
   }
-   
 }

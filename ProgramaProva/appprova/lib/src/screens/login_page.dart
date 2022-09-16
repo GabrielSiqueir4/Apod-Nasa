@@ -47,8 +47,8 @@ class _LoginPageState extends State<LoginPage> {
             child: FittedBox(
               fit: BoxFit.cover,
               child: SizedBox(
-                height: _videoPlayerController.value.size.height ?? 0,
-                width: _videoPlayerController.value.size.height ?? 0,
+                height: _videoPlayerController.value.size.height,
+                width: _videoPlayerController.value.size.height,
                 child: VideoPlayer(_videoPlayerController),
               ),
             ),
