@@ -12,21 +12,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _FavoritasPageState extends State<HomePage> {
+
+void initState(){
+  super.initState();
+  
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Center(
-            child: Column(
-              children: [
-                SizedBox(height: 50,),
-                Text('Texter'),
-              ],
-            ),
-
-          ),
-        ],
+      appBar: AppBar(
+        title: Text('Nasa Apod'),
+        centerTitle: true,
       ),
       
     );

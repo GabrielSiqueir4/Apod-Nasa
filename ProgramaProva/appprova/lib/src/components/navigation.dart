@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:appprova/src/models/previsao_model.dart';
-import 'package:appprova/src/screens/apod_pages/apod_day.dart';
-import 'package:appprova/src/screens/apod_pages/apod_page.dart';
-import 'package:appprova/src/screens/favorito_page/favoritos_page.dart';
+import 'package:appprova/src/screens/apod_pages/apod_Page.dart';
+import 'package:appprova/src/screens/favorito_page/favorito_Page.dart';
 import 'package:appprova/src/screens/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -36,13 +35,11 @@ class _NavigationState extends State<Navigation> {
       body: PageView(
         controller: pc,
       
+        // ignore: sort_child_properties_last
         children: [
           HomePage(),
-          ApodsPage(),
           ApodPage(),
-          /*
-          FavoritasPage(),
-          */
+          FavoritoPage()
         ],
         onPageChanged: setPaginaAtual,
       ),

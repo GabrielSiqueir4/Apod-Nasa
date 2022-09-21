@@ -2,7 +2,6 @@
 
 import 'dart:ui';
 import 'package:appprova/src/components/navigation.dart';
-import 'package:appprova/src/screens/favorito_page/favoritos_page.dart';
 import 'package:appprova/src/screens/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
