@@ -51,21 +51,21 @@ class _NavigationState extends State<Navigation> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Colors.orange,
+              color:  Colors.blueAccent,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.list_alt_rounded,
-              color: Colors.orange,
+              Icons.image,
+              color:   Colors.blueAccent,
             ),
-            label: 'Imagens',
+            label: 'APOD',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.star,
-              color: Colors.orange,
+              color:  Colors.blueAccent,
             ),
             label: 'Favoritos',
           ),

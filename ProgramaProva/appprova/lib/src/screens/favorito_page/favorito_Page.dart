@@ -47,62 +47,13 @@ class _FavoritoPage extends State<FavoritoPage> {
       body: ListView.builder(
           itemCount: nasaPost.length,
           itemBuilder: (BuildContext context, int index) {
-            
             return ListTile(
+                style: ListTileStyle.list,
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(nasaPost[index].url.toString()),
                 ),
-                trailing: const Text(
-                  "Favoritos Page",
-                  style: TextStyle(color: Colors.green, fontSize: 15),
-                ),
-                title: Text("List item $index"));
+                title: Text('Titulo: ' + nasaPost[index].title));
           }),
-      /*children: nasaPost.map((NasaPost nasaPost) => ListTile(
-                  title: Text(nasaPost.url),
-
-                ))
-            .toList(),*/
-    );
-
-    /*return CircularProgressIndicator();*/
-  }
-}
-  
-
-
-/*
-class ApodsPage extends StatefulWidget {
-  @override
-  State<ApodsPage> createState() => _ApodsPageState();
-}
-
-class _ApodsPageState extends State<ApodsPage> {
-  HttpHelper httpHelper = HttpHelper();
-
-  Widget build(BuildContext context) {
-     List<NasaPost>? nasaPost = [];
-     nasaPost =  httpHelper.getPost();
-  
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Apod"),
-      ),
-      body: FutureBuilder(builder:
-          (BuildContext context, AsyncSnapshot<List<NasaPost>> snapshot) {
-        if (snapshot.hasData) {
-         
-          return ListView(
-            children: nasaPost!
-                .map((NasaPost nasaPost) => ListTile(
-                      title: Text(nasaPost.explanation),
-                    ))
-                .toList(),
-          );
-        }
-        return CircularProgressIndicator();
-      }),
     );
   }
 }
-*/

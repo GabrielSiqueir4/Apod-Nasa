@@ -90,31 +90,57 @@ class _ApodPageState extends State<ApodPage> {
             ),
             Card(
               elevation: 16.0,
-              margin: EdgeInsets.all(12.0),
+
+              //margin: EdgeInsets.all(12.0),
               color: Colors.amber,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(14.0),
               ),
-              child: Column(
-                children: <Widget>[
-                  Stack(
-                    children: <Widget>[
-                      Container(
-                        width: 400,
-                        height: 300,
-                        child: Center(
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation(Colors.blue),
-                          ),
-                        ),
-                      ),
-                      Hero(
-                          tag: nasaPost[0].title,
-                          child: Image.network(nasaPost[0].url)),
-                    ],
-                  ),
-                ],
+
+              child: Container(
+                width: 350,
+                child: 
+                //CircularProgressIndicator()
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(14.0),
+                  child: Image.network(nasaPost[0].url),
+                ),
               ),
+              
+            ),
+            SizedBox(height: 25),
+            ElevatedButton.icon(
+              onPressed: () {
+                showAboutDialog(
+                  context: context,
+                  applicationName: 'Nasa APOD',
+                  children: <Widget>[
+                    Text('Data:  ' + nasaPost[0].date),
+                    SizedBox(height: 15),
+                    Text('Titulo:  ' + nasaPost[0].title),
+                    SizedBox(height: 15),
+                    Text('Descrição da APOD :  '),
+                    SizedBox(height: 10),
+                    Text(nasaPost[0].explanation)
+                  ],
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                  padding:
+                      EdgeInsets.only(top: 10, left: 30, right: 30, bottom: 10),
+                  primary: Color.fromARGB(255, 68, 79, 200)),
+              icon: Icon(Icons.description),
+              label: Text('Descrição'),
+            ),
+            SizedBox(height: 40),
+            ElevatedButton.icon(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  padding:
+                      EdgeInsets.only(top: 10, left: 30, right: 30, bottom: 10),
+                  primary: Color.fromARGB(255, 68, 79, 200)),
+              icon: Icon(Icons.star),
+              label: Text('Adicionar aos Favoritos'),
             ),
           ],
         ),

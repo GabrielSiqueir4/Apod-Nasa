@@ -2,6 +2,7 @@
 
 import 'dart:ui';
 import 'package:appprova/src/components/navigation.dart';
+
 import 'package:appprova/src/screens/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -96,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.only(
                             top: 10, left: 30, right: 30, bottom: 10),
-                        primary: Color.fromARGB(255, 148, 148, 148)),
+                        primary: Color.fromARGB(255, 68, 138, 255)),
                     icon: Icon(Icons.login),
                     label: Text('Entrar')),
                     
